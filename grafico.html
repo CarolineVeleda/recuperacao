@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="master.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    Nome da Escola: <input type="text" name="" id="escola">
+
+    Alunos/turma: <input type="number" id="alunos/turma">
+
+    Aprovação: <input type="number" name="" id="aprovacao">
+
+    TOTAL: <input type="number" id="total">
+
+    <button type="button" name="button" id="botao">Adicionar</button>
+
+    <br>
+    <br>
+
+
+
+    <h2>Nome da escola</h2>
+    <div class="escola"></div>
+
+    <h2>Alunos/Turma</h2>
+    <div class="turma"></div>
+
+    <h2>Aprovação %</h2>
+    <div class="aprovacao"></div>
+
+    <h2>Total Alunos</h2>
+    <div class="total"></div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+inEscola=document.getElementById('escola');
+divEscola=document.querySelector('div.escola');
+botao=document.getElementById('botao');
+
+inTurma=document.getElementById('alunos/turma');
+divTurma=document.querySelector('div.turma');
+
+inAprovacao=document.getElementById('aprovacao');
+divAprovacao=document.querySelector('div.aprovacao');
+
+inTotal=document.getElementById('total');
+divTotal=document.querySelector('div.total');
+
+vetorA=[];
+vetorE=[];
+vetorTu=[];
+
+
+
+function tam() {
+
+
+
+
+}
+
+
+botao.addEventListener('click',function(){
+
+vetorE.push(inEscola.value);
+vetorA.push(inAprovacao.value);
+vetorTu.push(inTurma.value);
+
+vetorA.sort(function(a, b){return a-b});
+vetorTu.sort(function(a, b){return a-b});
+
+
+divEscola.textContent = vetorE;
+divTurma.textContent = vetorTu;
+divAprovacao.textContent = vetorA;
+divTotal.textContent = inTotal.value;
+
+
+div=document.createElement('div');
+div1=document.createElement('div');
+div2=document.createElement('div');
+p=document.createElement('p');
+br=document.createElement('br');
+document.body.appendChild(div);
+document.body.appendChild(div2);
+div.classList.add('parte1');
+div1.classList.add('bola');
+
+div.appendChild(div1);
+div.appendChild(br);
+div.appendChild(br);
+div.appendChild(p);
+
+
+div2.textContent = inAprovacao.value;
+div1.textContent = inTurma.value;
+
+
+div1.id='div1';
+div2.id='div2';
+
+
+
+tamanho=(inTurma.value/inTotal.value)*100;
+
+div1.style.width =`${tamanho}%` ;
+div1.style.height= `${tamanho}%`;
+
+
+
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

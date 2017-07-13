@@ -1,0 +1,26 @@
+
+
+#parte1{
+
+
+  /*float: left;*/
+
+}
+
+#div2, #div1{
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:100px;
+
+}
+
+
+
+#div1{
+  color:green;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: black;
+}
